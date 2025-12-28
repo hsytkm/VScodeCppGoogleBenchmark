@@ -7,12 +7,14 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "${workspaceFolder}\\src\\*.cc",
+                "-o",
+                "${workspaceFolder}\\test.exe",
                 "-std=c++11",
                 "-DBENCHMARK_STATIC_DEFINE",
+                "-LC:\\dev\\mingw64\\x86_64-w64-mingw32\\lib",
                 "-lbenchmark",
                 "-lpthread",
-                "-o",
-                "${workspaceFolder}\\test.exe"
+                "-lshlwapi",
             ],
             "options": {
                 "cwd": "${fileDirname}"
